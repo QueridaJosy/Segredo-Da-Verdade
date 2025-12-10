@@ -1,0 +1,37 @@
+body{
+   background-color: rgb(17, 17, 17);
+   overflow: hidden;
+}
+#interno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#coloca{
+    display: flex;
+    margin-top: -300px;
+    
+
+}#coloca img{
+    
+    width: 1900px;  /* muda o tamanho */
+    height: auto;  /* mantém a proporção */
+
+}
+p{
+    color: white;
+    font-size: 30px;
+}
+#one{
+    margin-right: 55px;
+    position: relative;
+    font-size: 80px;
+    top: 30px;
+    color: rgb(250, 150, 250);
+}  
+#one:hover{
+    color: purple;
+    cursor: pointer;
+} 

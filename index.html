@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segredo Da Verdade</title>
+    <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+
+<div id="interno">  
+     <p onclick="window.location.href='site1.html'"   id="one"  >1</p>
+    
+    <div id="coloca">  
+        <img src="vamove.png">
+
+    </div>
+   </div>
+     
+
+
+<script>
+
+
+// Se algum player estiver lendo essa desgraça eu espero que a diva aos 50 te EXPLODA NUM LIQUIDIFICADOR
+const sequencia = ['ArrowUp','ArrowDown','ArrowRight','ArrowLeft','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','ArrowDown','ArrowUp','ArrowLeft','ArrowUp']
+
+let digitado=[];
+
+document.addEventListener("keydown", (event) => {
+
+    const tecla = event.key;
+
+    digitado.push(tecla);
+
+    if(digitado.length>sequencia.length){
+        digitado.shift();
+    }
+    if(JSON.stringify(digitado)=== JSON.stringify(sequencia)){
+        ativar();
+    }
+});
+ function ativar(){
+    window.location.href="imagem.html";
+}
+
+</script>
+</body>
+</html>
