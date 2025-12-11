@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+
+        #butao:hover{
+            cursor: pointer;
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body style="background-color: black; text-align: center;"  >
+
+    <p class="palavras"  style="color: white; font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    P pf ep apcrfyez, opaztd otddz efoz, nzxz glt? Pdapcz bfp pdepul mpx, pf yfynl apydz lyepd op qlwlc, lnsz bfp pdezf dzqcpyoz op Wlmtctyetep, dtrz dzyslyoz dpx qpnslc zd zwszd pdapclyoz alcl gpc z bfp ld wpyepd gãz xzdeclc. Yód dzxzd cpltd, yãz lotlyel qfrtc oz bfp dp dpyep. Pdapcz bfp pdepul px alk, dó gzf dp yãz qzc dpx gznê.
+<p class="palavras"  style="color: white; font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    -- Zyçl
+</p>
+
+       
+    </p>
+    <br><br>
+    <p class="palavras"  style="color: white; font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+         0:24 - 0:30
+        2:39 - 2:44
+        0:43 - 0:47
+        0:13 - 0:26
+        3:42 - 3:57
+        1:38 - 1:42
+
+
+    </p>
+    
+
+    <button onclick="ativarButao()"  id="butao" style="font-size: 20px; padding: 10px; border-radius: 10px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " >Lanterna</button>
+    
+
+<script>
+let lanterna = false;
+
+
+function ativarButao(){
+    if (!lanterna){ 
+        document.body.style.backgroundColor = "white";
+        let paragrafo = document.querySelectorAll("p");
+        paragrafo.forEach(p =>{
+            p.style.color = "black";
+        });
+        lanterna = true;
+    } else {
+        document.body.style.backgroundColor = "black";
+        let paragrafo = document.querySelectorAll("p");
+        paragrafo.forEach(p =>{
+            p.style.color = "white";
+        });
+        lanterna = false;
+    }
+}
+
+
+
+let hoje = new Date().toDateString();
+
+let ultimoDia = localStorage.getItem("ultimoDia");
+
+
+if (!ultimoDia) {
+    localStorage.setItem("ultimoDia", hoje);
+    ultimoDia = hoje;
+}
+
+
+function checarDia() {
+    let agora = new Date().toDateString();
+
+  
+    if (agora !== ultimoDia) {
+
+      
+        if (lanterna === true) {
+            alert("Nunca se Esqueça");
+        }
+
+       
+        localStorage.setItem("ultimoDia", agora);
+        ultimoDia = agora;
+    }
+}
+
+
+setInterval(checarDia, 3000);
+
+
+</script>
+
+</body>
+</html>
