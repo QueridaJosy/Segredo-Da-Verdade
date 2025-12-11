@@ -11,7 +11,7 @@ body{
 }
 #coloca{
     display: flex;
-    margin-top: -300px;
+    margin-top: -560px;
     
 
 }#coloca img{
@@ -35,3 +35,14 @@ p{
     color: purple;
     cursor: pointer;
 } 
+#two{
+    position: relative;
+    font-size: 80px;
+    color: rgb(250, 150, 250);
+    top: 420px;
+    right: 400px;
+}
+#two:hover{
+    color: purple;
+    cursor: pointer;
+}
